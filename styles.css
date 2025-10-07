@@ -1,0 +1,231 @@
+/* reset cơ bản */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 2.5fr 7.5fr;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f7fb;
+    color: #111827;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 30px 25px;
+    background-color: #1e3a8a; /* xanh đậm */
+    height: 100vh;
+    color: #ffffff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    filter: brightness(0) invert(1);
+}
+
+.logo h1 {
+    font-size: 26px;
+    color: #ffffff;
+}
+
+.tool {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    row-gap: 10px;
+    align-items: center;
+}
+
+.tool img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1);
+}
+
+.tool h2 {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* hover navbar items */
+.tool h2:hover {
+    color: #60a5fa; /* xanh nhạt khi hover */
+    cursor: pointer;
+}
+
+/* ===== MAINBOARD ===== */
+.mainboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f5f7fb;
+}
+
+/* searchbar */
+.searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+}
+
+.searchbar1 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bar {
+    width: 600px;
+    height: 40px;
+    background-color: #e0e7ff; /* xám nhạt */
+    border-radius: 20px;
+}
+
+.searchbar2 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.searchbar img {
+    width: 32px;
+    height: 32px;
+}
+
+.ava {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+}
+
+/* profile */
+.profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.profile p {
+    color: #6b7280;
+}
+
+.profile h1 {
+    font-size: 24px;
+    color: #111827;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    width: 100px;
+    height: 38px;
+    background-color: #1e3a8a;
+    color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 38px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.btn:hover {
+    background-color: #2563eb;
+}
+
+/* ===== BOARD ===== */
+.board {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2/3 - 1/3 */
+    gap: 30px;
+    padding: 20px 60px 40px;
+    flex: 1;
+    box-sizing: border-box;
+    align-items: stretch;
+}
+
+/* tiêu đề */
+.board h1 {
+    padding-top: 6px;
+    margin-bottom: 12px;
+    font-size: 20px;
+    color: #111827;
+}
+
+/* left: Your Projects */
+.board > div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* board1 grid */
+.board1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    height: 100%;
+}
+
+.board1 div {
+    background-color: #e0e7ff; /* nhạt hơn navbar */
+    border-radius: 10px;
+    height: 100%;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.board1 div:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* right: Announcements + Trending */
+.board > div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.board > div:last-child > div {
+    background-color: #e0e7ff;
+    border-radius: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 12px;
+    height: 48%;
+}
+
+.board > div:last-child h1 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.board > div:last-child div div {
+    background-color: #ffffff;
+    flex: 1;
+    border-radius: 10px;
+}
